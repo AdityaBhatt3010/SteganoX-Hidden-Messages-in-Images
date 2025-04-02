@@ -39,6 +39,7 @@ python SteganoX.py -e <image_path> "<secret_message>" <output_image_path>
 ```sh
 python SteganoX.py -e input.png "This is a secret!" output.png
 ```
+![Image](https://github.com/user-attachments/assets/358c6782-6808-4f07-ade7-a45908b538c2) <br/>
 
 #### 🔎 Decoding a Message:
 ```sh
@@ -48,6 +49,7 @@ python SteganoX.py -d <image_path>
 ```sh
 python SteganoX.py -d output.png
 ```
+![Image](https://github.com/user-attachments/assets/30ea5908-91c9-41c7-9012-05c8a0e7d975) <br/>
 
 ---
 ### 🖥️ Minimal Interactive Mode
@@ -68,6 +70,14 @@ Install all dependencies with:
 ```sh
 pip install -r requirements.txt
 ```
+
+### 🎯 Sample Images:
+
+#### 🔐 Imput Image:
+![Image](https://github.com/user-attachments/assets/1c2975ea-465d-462c-920f-41052bb5cdae) <br/>
+
+#### 🔎 Output Image:
+![Image](https://github.com/user-attachments/assets/2a846be8-3ad4-4f9a-a81e-9a8eb2f07a77) <br/>
 
 ---
 ## 👨‍💻 Author
