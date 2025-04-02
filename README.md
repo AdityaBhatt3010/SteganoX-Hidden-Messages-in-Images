@@ -15,8 +15,14 @@ SteganoX is a powerful steganography tool that lets you **hide and extract secre
 
 Clone the repository and install dependencies:
 ```sh
-git clone https://github.com/AdityaBhatt3010/SteganoX.git
-cd SteganoX
+git clone https://github.com/AdityaBhatt3010/SteganoX-Hidden-Messages-in-Images.git
+cd SteganoX-Hidden-Messages-in-Images
+python setup.py install
+```
+or simply run
+```sh
+git clone https://github.com/AdityaBhatt3010/SteganoX-Hidden-Messages-in-Images.git
+cd SteganoX-Hidden-Messages-in-Images
 pip install -r requirements.txt
 ```
 
