@@ -4,7 +4,7 @@ from termcolor import colored
 
 # Stylish heading function
 def stylish_heading():
-    a = figlet_format("ATS", font="starwars", width=1000)
+    a = figlet_format("SteganoX", font="starwars", width=1000)
     print(colored(a, "green"))
 
 # Function to encode text into an image
