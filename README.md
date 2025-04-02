@@ -10,9 +10,15 @@ SteganoX is a powerful steganography tool that lets you **hide and extract secre
 ✅ **Interactive mode** for quick and easy usage. <br/>
 ✅ **Lightweight & Efficient** – No unnecessary bloat! <br/>
 
----
-## 📥 Installation
+---## 📥 Installation
 
+### 🔹 Install via PyPI (Recommended)
+SteganoX is now available on PyPI! Install it using:
+```sh
+pip install SteganoX-Hidden-Messages-in-Images
+```
+
+### 🔹 Manual Installation
 Clone the repository and install dependencies:
 ```sh
 git clone https://github.com/AdityaBhatt3010/SteganoX-Hidden-Messages-in-Images.git
