@@ -4,11 +4,11 @@ SteganoX is a powerful steganography tool that lets you **hide and extract secre
 
 ---
 ## 🚀 Features
-✅ **Encode** secret messages into images
-✅ **Decode** hidden messages from images
-✅ **Command-line interface** for seamless automation
-✅ **Interactive mode** for quick and easy usage
-✅ **Lightweight & Efficient** – No unnecessary bloat!
+✅ **Encode** secret messages into images. <br/>
+✅ **Decode** hidden messages from images. <br/>
+✅ **Command-line interface** for seamless automation. <br/>
+✅ **Interactive mode** for quick and easy usage. <br/>
+✅ **Lightweight & Efficient** – No unnecessary bloat! <br/>
 
 ---
 ## 📥 Installation
@@ -64,11 +64,5 @@ pip install -r requirements.txt
 ```
 
 ---
-## 📜 License
-This project is licensed under the **GNU GPL V3 License**.
-
----
 ## 👨‍💻 Author
 Developed with ❤️ by **Aditya Bhatt**
-
-🔗 Connect with me on [LinkedIn](https://www.linkedin.com/) | 🛡️ Explore more on [GitHub](https://github.com/)
