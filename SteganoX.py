@@ -1,64 +1,22 @@
-from PIL import Image
+import argparse
+from utilities import encode_image, decode_image, stylish_heading
 
-# Function to encode text into an image
-def encode_image(image_path, secret_message, output_image_path):
-    img = Image.open(image_path)
-    img = img.convert("RGB")
+def main():
+    stylish_heading()
+    parser = argparse.ArgumentParser(description="SteganoX: Hide and Extract Messages in Images")
+    parser.add_argument("-e", "--encode", nargs=3, metavar=("image_path", "secret_message", "output_image_path"),
+                        help="Encode a message into an image. Usage: python SteganoX.py -e image_path secret_message output_image_path")
+    parser.add_argument("-d", "--decode", metavar="image_path", help="Decode a message from an image. Usage: python SteganoX.py -d image_path")
     
-    # Convert text to binary
-    binary_message = ''.join(format(ord(i), '08b') for i in secret_message) + '1111111111111110'
+    args = parser.parse_args()
     
-    data = list(img.getdata())
-    new_data = []
-    data_index = 0
-    bit_index = 0
-    
-    for pixel in data:
-        if data_index < len(binary_message):
-            new_pixel = list(pixel)
-            for i in range(3):  # Modify R, G, B values
-                if data_index < len(binary_message):
-                    new_pixel[i] = new_pixel[i] & ~1 | int(binary_message[data_index])
-                    data_index += 1
-            new_data.append(tuple(new_pixel))
-        else:
-            new_data.append(pixel)
-    
-    img.putdata(new_data)
-    img.save(output_image_path, format='PNG')
-    print(f"Message encoded and saved in {output_image_path}")
-
-# Function to decode text from an image
-def decode_image(image_path):
-    img = Image.open(image_path)
-    data = list(img.getdata())
-    
-    binary_message = ""
-    for pixel in data:
-        for i in range(3):  # Extract bits from R, G, B values
-            binary_message += str(pixel[i] & 1)
-    
-    # Convert binary message to text
-    chars = [binary_message[i:i+8] for i in range(0, len(binary_message), 8)]
-    message = ""
-    for char in chars:
-        if char == '1111111111111110':
-            break
-        message += chr(int(char, 2))
-    
-    print(f"Decoded message: {message}")
-    return message
+    if args.encode:
+        image_path, secret_message, output_image_path = args.encode
+        encode_image(image_path, secret_message, output_image_path)
+    elif args.decode:
+        decode_image(args.decode)
+    else:
+        parser.print_help()
 
 if __name__ == "__main__":
-    choice = input("Enter 'e' to encode or 'd' to decode: ")
-    
-    if choice.lower() == 'e':
-        image_path = input("Enter image path: ")
-        secret_message = input("Enter the message to hide: ")
-        output_image_path = input("Enter output image path: ")
-        encode_image(image_path, secret_message, output_image_path)
-    elif choice.lower() == 'd':
-        image_path = input("Enter image path to decode: ")
-        decode_image(image_path)
-    else:
-        print("Invalid choice!")
+    main()
