@@ -1,59 +1,74 @@
-# SteganoX: Hidden Messages in Images
+# 🌟 SteganoX: Hidden Messages in Images 🕵️‍♂️
 
-A simple Python script for encoding and decoding secret messages in images using **Least Significant Bit (LSB) steganography**.
+SteganoX is a powerful steganography tool that lets you **hide and extract secret messages** from images effortlessly. Whether you're a cybersecurity enthusiast, privacy advocate, or just having fun with hidden messages, **SteganoX has you covered!** 🔒✨
 
-## Features
-- Hide text messages inside images without altering visual appearance.
-- Extract hidden messages from encoded images.
-- Works with any RGB image format.
-- Lossless encoding using PNG format.
+---
+## 🚀 Features
+✅ **Encode** secret messages into images
+✅ **Decode** hidden messages from images
+✅ **Command-line interface** for seamless automation
+✅ **Interactive mode** for quick and easy usage
+✅ **Lightweight & Efficient** – No unnecessary bloat!
 
-## Installation
-Ensure you have Python installed, then install the required library:
-```bash
-pip install pillow
-```
+---
+## 📥 Installation
 
-or simply run
-```bash
+Clone the repository and install dependencies:
+```sh
+git clone https://github.com/yourusername/SteganoX.git
+cd SteganoX
 pip install -r requirements.txt
 ```
 
-## Clone the Repository
-```bash
-git clone https://github.com/AdityaBhatt3010/SteganoX.git
-cd SteganoX
+---
+## 🎯 Usage
+
+### 🔹 Command-Line Mode
+
+#### 🔐 Encoding a Message:
+```sh
+python SteganoX.py -e <image_path> "<secret_message>" <output_image_path>
+```
+**Example:**
+```sh
+python SteganoX.py -e input.png "This is a secret!" output.png
 ```
 
-## Usage
-### Encoding a Message into an Image
-```bash
-python steganography.py
+#### 🔎 Decoding a Message:
+```sh
+python SteganoX.py -d <image_path>
 ```
-1. Enter 'e' when prompted.
-2. Provide the image path, the secret message, and the output image path.
-
-### Decoding a Message from an Image
-```bash
-python steganography.py
-```
-1. Enter 'd' when prompted.
-2. Provide the image path containing the hidden message.
-
-## Example
-### Encoding
-```bash
-Enter 'e' to encode or 'd' to decode: e
-Enter image path: input.png
-Enter the message to hide: Hello, World!
-Enter output image path: output.png
-```
-### Decoding
-```bash
-Enter 'e' to encode or 'd' to decode: d
-Enter image path to decode: output.png
-Decoded message: Hello, World!
+**Example:**
+```sh
+python SteganoX.py -d output.png
 ```
 
-## License
-This project is licensed under the MIT License.
+---
+### 🖥️ Minimal Interactive Mode
+If you prefer a **guided experience**, run the interactive mode:
+```sh
+python SteganoX_Minimal.py
+```
+You'll be prompted to enter an image path, your message (if encoding), and an output file.
+
+---
+## 📌 Dependencies
+- **Python 3.x** 🐍
+- **Pillow** 🖼️ (Image processing)
+- **pyfiglet** 🎭 (Cool ASCII banners)
+- **termcolor** 🎨 (Stylish CLI output)
+
+Install all dependencies with:
+```sh
+pip install -r requirements.txt
+```
+
+---
+## 📜 License
+This project is licensed under the **MIT License**.
+
+---
+## 👨‍💻 Author
+Developed with ❤️ by **Aditya Bhatt**
+
+🔗 Connect with me on [LinkedIn](https://www.linkedin.com/) | 🛡️ Explore more on [GitHub](https://github.com/)
