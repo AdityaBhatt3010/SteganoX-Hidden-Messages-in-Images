@@ -15,7 +15,7 @@ SteganoX is a powerful steganography tool that lets you **hide and extract secre
 
 Clone the repository and install dependencies:
 ```sh
-git clone https://github.com/yourusername/SteganoX.git
+git clone https://github.com/AdityaBhatt3010/SteganoX.git
 cd SteganoX
 pip install -r requirements.txt
 ```
@@ -65,7 +65,7 @@ pip install -r requirements.txt
 
 ---
 ## 📜 License
-This project is licensed under the **MIT License**.
+This project is licensed under the **GNU GPL V3 License**.
 
 ---
 ## 👨‍💻 Author
