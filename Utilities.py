@@ -44,13 +44,17 @@ def decode_image(image_path):
         for i in range(3):  # Extract bits from R, G, B values
             binary_message += str(pixel[i] & 1)
     
-    # Convert binary message to text
-    chars = [binary_message[i:i+8] for i in range(0, len(binary_message), 8)]
-    message = ""
-    for char in chars:
-        if char == '1111111111111110':
-            break
-        message += chr(int(char, 2))
+    # Find delimiter index
+    end_marker = '1111111111111110'
+    end_index = binary_message.find(end_marker)
     
+    if end_index == -1:
+        print("Error: No valid hidden message found!")
+        return ""
+
+    # Convert binary message to text
+    chars = [binary_message[i:i+8] for i in range(0, end_index, 8)]
+    message = "".join(chr(int(char, 2)) for char in chars)
+
     print(f"Decoded message: {message}")
     return message
