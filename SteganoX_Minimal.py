@@ -1,7 +1,6 @@
-from utilities import encode_image, decode_image, stylish_heading
+from utilities import encode_image, decode_image
 
 def main():
-    stylish_heading()
     choice = input("Enter 'e' to encode or 'd' to decode: ").strip().lower()
     
     if choice == 'e':
